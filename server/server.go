@@ -17,7 +17,7 @@ import (
 
 	"github.com/NYTimes/gziphandler"
 	"github.com/jpillora/cloud-torrent/engine"
-	"github.com/jpillora/cloud-torrent/static"
+	ctstatic "github.com/jpillora/cloud-torrent/static"
 	"github.com/jpillora/cookieauth"
 	"github.com/jpillora/requestlog"
 	"github.com/jpillora/scraper/scraper"
@@ -95,7 +95,7 @@ func (s *Server) Run(version string) error {
 	s.engine = engine.New()
 	//configure engine
 	c := engine.Config{
-		DownloadDirectory: "./downloads",
+		DownloadDirectory: "../OneDrive/CloudTorrent",
 		EnableUpload:      true,
 		AutoStart:         true,
 	}
